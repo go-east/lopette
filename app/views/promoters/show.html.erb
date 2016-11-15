@@ -1,0 +1,14 @@
+<h2><%= @promoter.firstname %></h2>
+<p><%= @promoter.lastname %></p>
+<br>
+<p> Would you like to recommend some one </p>
+
+
+
+<%= simple_form_for [@promoter, @referree] do |f| %>
+  <%= f.input :email %>
+  <%= f.submit "add a referree", class: "btn btn-primary" %>
+<% end %>
+
+
+<%#form_for @referree, :url => new_lesson_note_path(@lesson) do

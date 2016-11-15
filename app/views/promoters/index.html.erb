@@ -1,0 +1,20 @@
+<% @promoters.each do |promoter| %>
+  <h2><%= promoter.firstname %></h2>
+  <p><%= promoter.lastname %></p>
+  <p><%= promoter.email%></p>
+<% end %>
+
+<br>
+
+
+<p> Would you like to recommend someone else ?  </p>
+
+<%= form_for(@promoter) do |f| %>
+  <%= f.label :firstname %>
+  <%= f.text_field :firstname %>
+  <%= f.label :lastname %>
+  <%= f.text_field :lastname %>
+  <%= f.label :email %>
+  <%= f.text_field :email %>
+  <%= f.submit %>
+<% end %>

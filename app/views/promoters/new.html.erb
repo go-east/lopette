@@ -1,0 +1,14 @@
+<h1>Promoters#new</h1>
+<p>Find me in app/views/promoters/new.html.erb</p>
+
+
+<%= form_for(@promoter) do |f| %>
+  <%= f.label :firstname %>
+  <%= f.text_field :firstname %>
+  <%= f.label :lastname %>
+  <%= f.text_field :lastname %>
+  <%= f.label :email %>
+  <%= f.text_field :email %>
+  <%= f.submit %>
+<% end %>
+
